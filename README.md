@@ -1,5 +1,5 @@
 # Pine Forest Berry
-This is a dark and light theme for Obsidian with an overal minimal design and calm but aesthetic colour palette.
+This is a dark and light theme for Obsidian with an overal minimal design and calm but aesthetic colour palette. It works with sliding panes as well as in "classic pane mode".
 
 I use a Tag-Pill Css Snippet that is not included in the main css file because it is customized to my specific use of tags.
 
