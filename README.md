@@ -7,4 +7,4 @@ Feel free to ask any questions you might have or make some suggestions for impro
 
 (This theme is largely based on the [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) theme by jarodise, as well as some snippets from other community themes.)
 
-
+![Screenshot PFB 1]
