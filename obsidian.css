@@ -1,6 +1,6 @@
 /*
 
-======= Pine Forest Berry =======
+======= Pine Forest Berry Version 1.2 =======
 by Nilahn
 
 based on Dracula_for_Obsidian by jarodise and snippets of other community themes
@@ -19,7 +19,8 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
     --font-size-code:                14px;
     --font-size-side-dock:           16px;
     --font-size-side-dock-title:     18px;
-    --font-size-status-bar:          16px;
+    --font-size-status-bar:          14px;
+    --font-size-titlebar:            14px;
     --font-size-h1:                  22px;
     --font-size-h2:                  18px;
     --font-size-h3:                  16px;
@@ -33,6 +34,7 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
     --forest-green-faded: #c3d5d0 ;
     --forest-green-dark: #4a6860 ;
     --mint-green: #9dd4cf;
+    --forest-green-half: rgb(117, 158, 147, 0.4);
     --berry-red-strong: #c72e6e ;
     --berry-red-light: #ad3266 ;
     --berry-red-faded: #ab687e ;
@@ -41,6 +43,7 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
     --blue-gray-dark: #3b4252 ;
     --blue-gray-darkest: #15181e ;
     --off-white:  #f2f2f2 ;
+    --off-white-faded: rgb(242, 242, 242, 0.8);
     --off-white-alt: #e6e6e6 ;
     --off-white-dark: #cccccc ;
     --off-white-darker: #8c8c8c ;
@@ -51,12 +54,16 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
 /*             Definitions: Light Theme             */
 .theme-light {
   --background-primary: var(--off-white);
+  --background-primary-faded: var(--off-white-faded);
   --background-primary-alt: var(--off-white-alt);
   --background-dark: var(--blue-gray-dark);
-  --background-secondary: var(--off-white-dark);
+  --background-header-one: var(--background-primary);
+  --background-header-two: var(--forest-green-faded);
+  --background-secondary: var(--off-white);
   --background-secondary-real: var(--off-white-dark);
   --background-secondary-alt: var(--forest-green-faded);
   --background-accent: var(--forest-green-dark);
+  --background-modal: rgba(0, 0, 0, 0.3);
   --background-modifier-border: var(--forest-green-light);
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
@@ -64,7 +71,10 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --background-nav: var(--background-primary);
   --background-nav-alt: var(--background-primary-alt);
-  --background-code: rgba(195, 213, 208, 0.3);
+  --background-code: var(--off-white-alt);
+  --graph-background: var(--background-primary);
+  --graph-links: rgba(117, 158, 147, 0.7);
+  --graph-dots: var(--forest-green-dark);
   --text-accent: var(--orange-yellow-dark); /* links */
   --text-accent-hover: var(--berry-red-strong); /* links hover */
   --text-normal-alt: var(--blue-gray-dark);
@@ -93,14 +103,19 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
   --calendar-days: var(--forest-green-dark);
   --calendar-days-hover: var(--text-normal);
 
+
+  --active-header-border: var(--orange-yellow);
+  --active-header-buttons: var(--forest-green-dark);
+  --selected-item: var(--forest-green-light);
+
   --text-title-h1:              #c72e6e;
   --text-title-h2:              #548a7b;
   --text-title-h3:              #95bab0;
   --text-title-h4:              #759e93;
   --text-title-h5:              #548a7b;
   --text-title-h6:              #377362;
-  --inline-code:                #bd93f9;
-  --code-block:                 #8be9fd;
+  --inline-code:                #c72e6e;
+  --code-block:                 #c72e6e;
   --pre-code:                   var(--forest-green-faded);
   --blockquote-border:          var(--forest-green-dark);
   --vim-cursor:                 var(--forest-green-dark);
@@ -114,6 +129,9 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
   --background-secondary: #3b4252;
   --background-secondary-alt: #292c33;
   --background-accent: #f8f8f2;
+  --background-header-one: var(--background-primary);
+  --background-header-two: var(--forest-green-dark);
+  --background-modal: rgba(0, 0, 0, 0.6);
   --background-modifier-border: var(--forest-green-light);
   --background-modifier-form-field: rgba(0, 0, 0, 0.2);
   --background-modifier-form-field-highlighted: rgba(0, 0, 0, 0.5);
@@ -121,7 +139,10 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
   --background-modifier-cover: rgba(0, 0, 0, 0.6);
   --background-nav: var(--background-primary);
   --background-nav-alt: var(--background-primary-alt);
-  --background-code: ;
+  --background-code: var(--background-secondary-alt);
+  --graph-background: var(--background-primary-alt);
+  --graph-links: rgba(157, 212, 207, 0.75);
+  --graph-dots: var(--off-white);
   --text-accent: #f2bd77;
   --text-accent-hover: #c72e6e;
   --text-normal: #f8f8f2;
@@ -149,14 +170,18 @@ based on Dracula_for_Obsidian by jarodise and snippets of other community themes
   --calendar-days: var(--off-white-dark);
   --calendar-days-hover: var(--off-white);
 
+  --active-header-border: var(--forest-green-light);
+  --active-header-buttons: var(--off-white);
+  --selected-item: var(--forest-green-light);
+
   --text-title-h1:              #c72e6e;
   --text-title-h2:              #ffffff;
   --text-title-h3:              #95bab0;
   --text-title-h4:              #759e93;
   --text-title-h5:              #548a7b;
   --text-title-h6:              #377362;
-  --inline-code:                #bd93f9;
-  --code-block:                 #8be9fd;
+  --inline-code:                #759e93;
+  --code-block:                 #759e93;
   --pre-code:                   #2e3440;
   --blockquote-border:          #ffb86c;
   --vim-cursor:                 #ff5555;
@@ -240,6 +265,35 @@ img:hover {
   transform: none;
 }
 
+/* titlebar and status-bar */
+
+.titlebar {
+  color: var(--text-status-bar);
+  background-color: var(--background-secondary-alt);
+  font-size: var(--font-size-titlebar);
+}
+.titlebar-button {
+  color: var(--text-status-bar);
+}
+.titlebar-text {
+  color: var(--text-status-bar);
+}
+.titlebar-button:hover {
+  color: var(--berry-red-strong);
+}
+
+
+.status-bar{
+  color: var(--text-status-bar);
+  font-size: var(--font-size-status-bar);
+  background-color: var(--background-secondary-alt);
+  border-top: 0px;
+}
+.status-bar-item.plugin-backlink:hover {
+  color: var(--berry-red-strong);
+}
+
+
 
 /* Headings - EDITOR and PREVIEW */
 
@@ -250,7 +304,7 @@ img:hover {
   font-size: var(--font-size-h1);
   color: var(--text-title-h1);
   text-align: left;
-  border-bottom: 1px solid !important;
+  border-bottom: 1px solid;
 }
 .cm-header-1, .markdown-editor-view h1
 {
@@ -259,7 +313,7 @@ img:hover {
   font-size: var(--font-size-h1);
   color: var(--text-title-h1);
   text-align: left;
-  border-bottom: 1px solid !important;
+  border-bottom: 1px solid ;
 }
 
 .cm-header-2, .markdown-preview-view h2
@@ -573,7 +627,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
 }
 
 /* Add button hovers to the the Update internal links modal (and possibly others) */
-.modal-button-container button:not(.mod-cta):not(.mod-warning):hover {
+.modal-button-container button:not(.mod-warning):hover {
   background-color: var(--text-accent);
   color: var(--text-normal);
 }
@@ -671,13 +725,7 @@ body:not(.is-grabbing) .nav-folder-title:hover {
   padding-right: 0px;
 }
 
-/*status-bar*/
-.status-bar{
-  color: var(--text-status-bar);
-  font-size: var(--font-size-status-bar);
-  background-color: var(--background-secondary-alt);
-  border-top: 0px;
-}
+
 
 .document-search-container{
   background-color: var(--background-secondary-real);
@@ -708,7 +756,7 @@ a.tag:hover {
 
 /* Tag Color in editor and preview*/
 .cm-hashtag, a.tag {
-  color: white !important;
+  color: var(--text-normal) !important;
   text-decoration: none !important;
   font-style: normal !important;
 }
@@ -760,48 +808,77 @@ a:not(.internal-link) {
 
 
 /***************************************/
-/*         Code block in  Preview      */
+/*               Code                  */
 /***************************************/
 
-/* code blocks in preview */
-pre code {
-  font-family: monaco !important;
-  font-size: var(--font-size-code) !important;
-  padding: 6px !important;
-  line-height: normal;
-  display: block;
-  color: var(--background-secondary-real)  !important;
+
+/* Preview Code Block*/
+
+.markdown-preview-view code {
+    color: var(--inline-code);
+    font-size: var(--font-size-code);
 }
 
-/* padding of code blocks in preview */
-.markdown-preview-view pre {
-  padding: 0px !important;
+/* Preview Code Block Active*/
+ .theme-dark .workspace-split.mod-vertical :not(:last-child) .workspace-leaf.mod-active .view-content pre[class*="language-"] {
+    background: var(--background-code);
+    border:1px solid var(--orange-yellow);
 }
 
-/* font-size of in-line block for preview */
-.markdown-preview-view code
-{
-  font-size: var(--font-size-code);
+.cm-s-obsidian pre.HyperMD-codeblock.CodeMirror-line {
+    font-size: var(--font-size-code);
+    color: var(--inline-code);
+}
+
+/* Edit Code Block Mid*/
+.cm-s-obsidian div.HyperMD-codeblock-bg {
+    background: var(--background-code);
+    border-left:1px solid var(--berry-red-strong);
+    border-right:1px solid var(--background-primary);
+}
+
+/* Edit Code Block Top */
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock-begin{
+    border-top: 1px solid var(--background-primary);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Edit Code Block Bottom */
+.theme-dark .cm-s-obsidian pre.HyperMD-codeblock-end{
+    border-bottom: 1px solid var(--background-primary);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Edit Code Block Mid Active*/
+.workspace-split.mod-vertical :not(:last-child) .workspace-leaf.mod-active .view-content .cm-s-obsidian div.HyperMD-codeblock-bg{
+    background: var(--berry-red-strong);
+}
+
+/* Edit Code Line */
+.cm-s-obsidian span.cm-inline-code, .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight){
+    color: var(--inline-code);
+    background: var(--background-code);
+    border-top:1px solid var(--background-primary-alt);
+    border-bottom:1px solid var(--background-primary-alt);
+}
+
+.span.cm-formatting.cm-forting-code.cm-inline-code {
+    color: var(--inline-code);
+    font-size: var(--font-size-code);
+    background: var(--background-code);
+
 }
 
 
-/* remove the shadow that typically affect light mode */
-.theme-dark code[class*="language-"],
-.theme-dark pre[class*="language-"],
-.theme-light code[class*="language-"],
-.theme-light pre[class*="language-"]
-{
-    text-shadow: none !important;
-    color: var(--text-faint) !important;
-    background-color: var(--background-secondary-real);
-}
 
 /***************************************/
 /*              Brackets               */
 /***************************************/
 
 .cm-s-obsidian span.cm-formatting-link {
-  color: var(--text-accent) !important;
+  color: var(--text-accent);
 }
 
 /***************************************/
@@ -810,7 +887,7 @@ pre code {
 
 /* for editor */
 .cm-quote {
-  color: var(--text-normal) !important;
+  color: var(--text-normal);
   font-style: italic;
 }
 
@@ -818,8 +895,8 @@ pre code {
 .markdown-preview-view blockquote {
   background-color: var(--background-primary);
   border: 0px solid;
-  border-color: var(--orange-yellow-dark) !important;
-  border-left-width: 4px !important;
+  border-color: var(--orange-yellow-dark) ;
+  border-left-width: 4px ;
   border-radius: 0 8px 8px 0;
   line-height: 1.5em;
   margin: 30px 0px;
@@ -831,16 +908,13 @@ pre code {
 /***************************************/
 
 th {
-  font-weight: 800 !important;
+  font-weight: 800 ;
 }
 
 .markdown-preview-view th {
     font-weight: 800;
-    background-color: var(--background-secondary-alt) !important;
-}
+    background-color: var(--background-secondary-alt) ;
 
-thead {
-  border-bottom: 3px solid var(--forest-green-dark);
 }
 
 .table {
@@ -852,6 +926,12 @@ thead {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
+
+.table-view-th {
+  color: var(--text-normal);
+  border-bottom: 3px solid var(--forest-green-dark) !important ;
+}
+
 
 /***************************************/
 /*               Checkbox              */
@@ -965,6 +1045,44 @@ color: var(--text-accent) !important;
 }
 
 /***************************************/
+/*      inactive background            */
+/***************************************/
+
+.modal-bg {
+  background-color: var(--background-modal);
+}
+
+
+/***************************************/
+/*           control panel             */
+/***************************************/
+
+.prompt {
+  background-color: var(--background-primary);
+}
+
+.prompt .suggestion-item {
+  color: var(--text-nav);
+}
+
+input.prompt-input {
+  background-color: var(--background-secondary-alt);
+  color: var(--interactive-accent);
+}
+input.prompt-input:hover {
+  background-color: var(--background-primary);
+  color: var(--interactive-accent);
+}
+
+.suggestion-item.is-selected {
+  background-color: var(--background-secondary-alt);
+  color: var(--text-normal);
+}
+
+
+
+
+/***************************************/
 /*             graph view              */
 /***************************************/
 .graph-view.color-circle,
@@ -989,7 +1107,7 @@ color: var(--text-accent) !important;
 }
 
 .graph-view.color-line {
-    color: #759e93;
+    color: var(--graph-links);
 }
 
 .graph-view.color-fill-unresolved {
@@ -998,27 +1116,42 @@ Opacity: 0.5 ;
 }
 
 .graph-view.color-fill{
-    color: var(--text-muted-real);
+    color: var(--graph-dots);
 }
 .theme-light .graph-view.color-fill{
-    color: var(--forest-green-light);
+    color: var(--graph-dots);
 }
 
 
 .workspace-leaf-content[data-type = "graph"] .view-content{
-  background-color: var(--background-primary);
+  background-color: var(--graph-background);
 }
 
 /***************************************/
 /*            settings                 */
 /***************************************/
+.vertical-tab-header-group-title {
+  color: var(--berry-red-strong);
+}
 
-.modal.mod-settings button:not(.mod-cta):hover {
-  background-color: var(--interactive-hover);
+.modal.mod-settings button  {
+  background-color: var(--forest-green-light);
+  color: var(--off-white);
+}
+
+.modal.mod-settings button:hover {
+  background-color: var(--text-accent);
+  color: var(--text-normal);
 }
 .modal {
   border: 1px solid var(--interactive-accent);
 }
+
+.theme-light .modal {
+  border: 2px solid var(--interactive-accent);
+}
+
+
 /*Settings Right*/
 .modal.mod-settings .vertical-tab-content-container {
     padding: 35px 40px 20px 0;
@@ -1039,16 +1172,30 @@ Opacity: 0.5 ;
     padding: 10px 6px 10px 24px;
     cursor: default;
     font-size: 16px;
+    color: var(--text-faint);
 }
 .horizontal-tab-nav-item:hover, .vertical-tab-nav-item:hover {
     background-color: var(--menu-item-hover);
     color: var(--text-normal);
 }
 
+.theme-light .vertical-tab-header {
+  background-color: var(--background-primary-alt);
+}
+
+.theme-light .horizontal-tab-nav-item, .vertical-tab-nav-item {
+    background-color: var(--background-primary-alt);
+    padding: 10px 6px 10px 24px;
+    cursor: default;
+    font-size: 16px;
+    color: var(--text-faint);
+}
 
 /*Selected Item*/
 .horizontal-tab-nav-item.is-active, .vertical-tab-nav-item.is-active {
-    background-color: var(--forest-green-dark);
+    background-color: var(--selected-item);
+    color: var(--off-white);
+    border-left-color: var(--text-accent);
 }
 
 
@@ -1056,7 +1203,7 @@ Opacity: 0.5 ;
 .dropdown {
     background-color: var(--forest-green-light);
     background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E);
-    color: var(--forest-green-dark)
+    color: var(--off-white);
 }
 .dropdown:hover {
   background-color: var(--orange-yellow-dark)
@@ -1106,81 +1253,52 @@ Opacity: 0.5 ;
 /* ========= Header ==============*/
 /**********************************/
 
-.view-header-title {
+.view-header-title{
   font-size: 14px;
-}
-/*.workspace-leaf.mod-active .view-header-title-container:after {
-  background: linear-gradient(to bottom, transparent, var(--background-secondary-alt)) !important;
-}*/
-
-
-/* === Header Light Theme === */
-
-.theme-light .view-header {
-  background-color: var(--background-primary) !important;
-  border-top: 1px solid var(--background-secondary-alt) !important;
-  border-bottom: 1px solid var(--background-secondary-alt) !important;
+  color: var(--text-faint);
 }
 
-.theme-light .view-header-title-container:after {
-  background: none !important;
+.view-header-icon, .view-action {
+  color: var(--text-faint);
 }
 
-.theme-light .mod-active .view-header-title-container {
-  background-color: var(--forest-green-faded) !important;
+.view-header-icon:hover,
+.view-action:hover {
+  color: var(--orange-yellow);
 }
 
-.theme-light .mod-active .view-header {
-  background-color: var(--forest-green-faded) !important;
-  border-top: 1px solid var(--background-secondary-alt) !important;
-  border-bottom: 3px solid var(--orange-yellow) !important;
+.view-header {
+  background-color: var(--background-header-one);
+  border-top: 1px solid var(--background-secondary-alt);
+  border-bottom: 1px solid var(--background-secondary-alt);
+
 }
 
-.theme-light .workspace-leaf .mod-active .view-header {
-  color: var(--forest-green-dark) !important;
-  background-color: var(--forest-green-light) !important;
-  border-top: 0px !important;
-  border-bottom: 3px solid var(--berry-red) !important;
+.view-header-title-container:after {
+  background: none !important ;
 }
 
-.theme-light .workspace-leaf.mod-active .view-header-title,
+.view-header-title-container:before {
+  background: none !important ;
+}
+
+.workspace-leaf.mod-active .view-header-title {
+  color: var(--text-normal);
+}
+.workspace-leaf.mod-active .view-header,
+.worksapce-leaf.mod-active .view-header-title-container {
+  background-color: var(--background-header-two) ;
+  border-top: 1px solid var(--background-secondary-alt) ;
+  border-bottom: 3px solid var(--active-header-border) ;
+}
+.workspace-leaf.mod-active .view-action,
+.workspace-leaf.mod-active .view-header-title,
 .workspace-leaf.mod-active .view-header-icon {
-  color: var(--forest-green-dark);
+  color: var(--active-header-buttons);
 }
-
-.theme-light, .view-header-title, .view-header-icon, .view-action{
-  color: var(--text-faint);
+.workspace-leaf.mod-active .view-action:hover {
+  color: var(--orange-yellow);
 }
-
-/* ==== Header Dark Theme ==== */
-
-.theme-dark .view-header {
-  background-color: var(--background-primary) !important;
-  border-top: 1px solid var(--border-color) !important;
-  border-bottom: 1px solid var(--border-color) !important;
-}
-
-.theme-dark .view-header-title-container:after {
-  background: none !important;
-}
-
-.theme-dark .workspace-leaf.mod-active .view-header {
-  color: var(--off-white) !important;
-  background-color: var(--forest-green-dark) !important;
-  border-top: 0px !important;
-  border-bottom: 3px solid var(--interactive-accent) !important;
-}
-
-.theme-dark .workspace-leaf.mod-active .view-header-title,
-.workspace-leaf.mod-active .view-header-icon
-{
-  color: var(--off-white);
-}
-
-.theme-dark, .view-header-title, .view-header-icon, .view-action{
-  color: var(--text-faint);
-}
-
 
 
 /***************************************/
@@ -1198,58 +1316,15 @@ ul ul::before { left: -1em; top: 0; bottom: 0; }
 /* rule line when there are checkboxes*/
 ul .task-list-item ul::before {left: 0.15em !important}
 
-/***************************************/
-/*       Code block in Editor          */
-/***************************************/
 
-/* in-line block for editor */
-.cm-s-obsidian span.cm-inline-code,
-.cm-s-obsidian span.cm-inline-code.cm-hmd-indented-code,
-.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code)
-{
-  background-color: var(--background-code);
-  color: var(--inline-code) !important;
-  bottom: 0px !important;
-}
 
- /* Editor CodeBlock TEXT Appearance */
-.cm-s-obsidian pre.HyperMD-codeblock {
-  font-family: monaco !important;
-  font-size: var(--font-size-code) !important;
-  padding: 1px !important;
-  display: block;
-  color: var(--inline-code) !important;
-  background-color: var(--background-code);
-  font-weight: 500;
-  text-indent: 0px !important;
-}
 
-.theme-light .cm-s-obsidian pre.HyperMD-codeblock {
-  font-family: monaco !important;
-  font-size: var(--font-size-code) !important;
-  padding: 1px !important;
-  display: block;
-  color: var(--berry-red-strong) !important;
-  background-color: var(--background-code);
-  font-weight: 500;
-  text-indent: 0px !important;
-}
-
-/*remove the border of codeblock in editor */
-.HyperMD-codeblock-bg{
-  border: 0px !important;
-}
 
 /*an active line highlight in vim normal mode
 .cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground{
   background-color: var(--text-selection) !important;
 }*/
 
-/* in-line block for preview */
-code{
-  color: var(--inline-code) !important;
-  bottom: 0px !important;
-}
 
 /* graph css  */
 .theme-dark .graph-view.color-arrow {
