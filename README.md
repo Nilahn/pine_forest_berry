@@ -6,8 +6,7 @@ Feel free to ask any questions you might have or make some suggestions for impro
 
 (This theme is largely based on snippets of other themes and some free-style-css-fiddeling. Mostly the [Dracula for Obsidian](https://github.com/jarodise/Dracula-for-Obsidian.md) theme by jarodise, as well as the [Minimal Theme by Kepano](https://minimal.guide/Home).  
 
-
-![Screenshot PFB 1](https://github.com/Nilahn/pine_forest_berry/blob/main/Screenshot%20PFB%201.png)
+![Screenshot Update](https://github.com/Nilahn/pine_forest_berry/blob/main/Screenshot%20PFB%201.3.png)
 
 
 ## Update Version 1.2:
