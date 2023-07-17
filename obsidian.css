@@ -1,6 +1,6 @@
 /*
 
-======= Pine Forest Berry Version 1.3 =======
+======= Pine Forest Berry Version 1.3.1 =======
 by Nilahn
 
 based on snippets of other community themes, mainly Dracula and Minimal
@@ -414,7 +414,7 @@ img:hover {
 
 div.nav-header {
     padding: var(--size-4-2);
-    border-right: 1px;
+    
 }
 
 /* Color of the curve of the top tabs */
@@ -441,6 +441,7 @@ div.nav-header {
 /* resize handle coloring */
 .workspace-leaf-resize-handle {
   background-color: transparent;
+  border: transparent;
 }
 
 /* Set the left nav background to same color as ribbon so we can make a curved corner that matches */
@@ -716,7 +717,7 @@ button:not(.clickable-icon) {
 /*workspace ribbon when collapsed*/
 .workspace-ribbon.is-collapsed {
   background-color: var(--background-nav-alt);
-  border-bottom: none;
+  border: transparent;
 }
 
 /*the vertical split*/
@@ -734,6 +735,10 @@ button:not(.clickable-icon) {
   border-top: 0px;
   border-right: 0px;
   z-index: inherit;
+}
+
+.workspace-ribbon {
+  border-right: none;
 }
 
 .workspace-ribbon.mod-left:before {
@@ -937,7 +942,6 @@ a:not(.internal-link) {
 /***************************************/
 
 
-/* Checklists, task lists, checkboxes */
 body {
   --checkbox-radius: 50%;
   --checkbox-top: 2px;
@@ -988,14 +992,9 @@ body:not(.minimal-strike-lists) {
   .minimal-code-scroll .cm-hmd-codeblock {
     white-space: pre !important; }
 
-/* Checklist icons */
-.cm-formatting.cm-formatting-task.cm-property {
-  font-family: var(--font-monospace);
-  font-size: 90%; }
-
-input[type=checkbox]:checked:after {
-    content: none;
-}
+@media print {
+  .print {
+    --code-background: #eee !important; } }
 
 input[data-task=">"]:checked,
 input[data-task="!"]:checked,
@@ -1445,6 +1444,28 @@ Opacity: 0.5 ;
 
 .theme-light .modal {
   border: 2px solid var(--interactive-accent);
+}
+
+.community-item {
+  border: none;
+}
+
+.community-item:hover {
+  border: 1px solid var(--forest-green-light);
+}
+
+.community-modal-readme {
+  font: var(--font-family-preview);
+}
+
+.community-modal-button-container button {
+  background-color: var(--forest-green-light);
+  color: var(--off-white);
+}
+
+.community-modal-button-container button:hover {
+  background-color: var(--text-accent);
+  color: var(--off-white);
 }
 
 
