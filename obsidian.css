@@ -16,7 +16,7 @@ based on snippets of other community themes, mainly Dracula and Minimal
 
 :root
 {
-   
+
 
     --font-family-editor:            Inconsolata, Monaco, Consolas, 'Courier New', Courier;
     --font-family-preview:           Avenir, Avenir Next, sans-serif;
@@ -305,7 +305,7 @@ img:hover {
   font-weight: 8000;
   color: var(--text-title-h1);
   text-align: left;
-  
+
 }
 
 .cm-header-2, .markdown-preview-view h2
@@ -414,7 +414,7 @@ img:hover {
 
 div.nav-header {
     padding: var(--size-4-2);
-    
+
 }
 
 /* Color of the curve of the top tabs */
@@ -1472,7 +1472,7 @@ Opacity: 0.5 ;
 /*Settings Right*/
 .modal.mod-settings .vertical-tab-content-container {
     padding: 35px 40px 20px 0;
-    height: 100vh;
+    height: inherit;
     background-color: var(--background-primary);
 }
 .horizontal-tab-content, .vertical-tab-content {
